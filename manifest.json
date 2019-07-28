@@ -1,0 +1,6 @@
+{
+  "name": "Notification Block",
+  "version": "0.1",
+  "description": "A browser extension to block websites from immediately requesting to display notifications after page load",
+  "manifest_version": 2
+}
