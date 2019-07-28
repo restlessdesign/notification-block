@@ -1,7 +1,7 @@
 # General plan of attack
 
 
-```
+```js
 // Wrap `Notification.requestPermission()` so that we can perform custom
 // logic and still hook back to default implementation if necessary.
 const reqPermLegacy = Notification.requestPermission;
