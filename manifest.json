@@ -2,5 +2,9 @@
   "name": "Notification Block",
   "version": "0.1",
   "description": "A browser extension to block websites from immediately requesting to display notifications after page load",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
   "manifest_version": 2
 }
