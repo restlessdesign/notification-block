@@ -4,7 +4,7 @@
   "description": "A browser extension to block websites from immediately requesting to display notifications after page load",
   "background": {
     "scripts": ["background.js"],
-    "persistent": true
+    "persistent": false
   },
   "manifest_version": 2
 }
