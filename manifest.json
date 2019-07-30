@@ -2,9 +2,18 @@
   "name": "Notification Block",
   "version": "0.1",
   "description": "A browser extension to block websites from immediately requesting to display notifications after page load",
+  "author": "Kevin Sweeney",
+
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
+  "default_locale": "en",
+  "icons": { 
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+
   "manifest_version": 2
 }
