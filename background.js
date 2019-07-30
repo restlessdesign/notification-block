@@ -1,5 +1,7 @@
-'use strict';
-
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('Notification block extension installed.');
+  console.log('Thank you for installing Notification Block!');
+});
+
+chrome.webNavigation.onCompleted.addListener((details) => {
+  console.log(`Navigated to ${details.url}`);
 });
