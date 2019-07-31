@@ -4,14 +4,25 @@
   "description": "A browser extension to block websites from immediately requesting to display notifications after page load",
   "author": "Kevin Sweeney",
 
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "default_locale": "en",
   "icons": { 
     "128": "icons/128.png"
   },
+
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/overload.js"],
+      "run_at":"document_start"
+    }
+  ],
+
+  "permissions": [
+    "webNavigation"
+  ],
 
   "manifest_version": 2
 }
