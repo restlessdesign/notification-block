@@ -1,5 +1,4 @@
 const actualCode = `
-
 const TIME_LIMIT = 5000;
 const nrp = Notification.requestPermission;
 
