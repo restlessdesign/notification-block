@@ -1,14 +1,13 @@
 const actualCode = `
-const reqPermLegacy = Notification.requestPermission;
+
+const TIME_LIMIT = 5000;
+const nrp = Notification.requestPermission;
+
 Notification.requestPermission = function(callback) {
-  if (Date.now() - window.performance.timing.loadEventEnd > 5000) {
-    console.log('Notification.requestPermission called after 5s');
-    console.log('Allowing notification…');
-    return reqPermLegacy(callback);
+  if (Date.now() - window.performance.timing.loadEventEnd > TIME_LIMIT) {
+    return nrp(callback);
   }
 
-  console.log('Notification.requestPermission called within 5s');
-  console.log('Blocking…');
   return Promise.reject(new Error('Your request to spam this user with notifications has been rejected.'));
 }
 `;
